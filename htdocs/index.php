@@ -15,35 +15,41 @@ include 'bddConnexion.php';
     <title>HomePage|TellMe.io</title>
 </head>
 <body>
-<header>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-md bg-dark justify-content-between">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    <div class="navbar-collapse collapse dual-nav w-50 order-1 order-md-0">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link pl-0" href="index.php">Accueil<span class="sr-only">Home</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="modificationProfil.php">Profil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="deconnexionUser.php">Déconnexion</a>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                        <a href="index.php" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25">TellMe.io</a>
+                    <div class="navbar-collapse collapse dual-nav w-50 order-2">
+                    </div>
+            </div>
+        </nav>
+    </header>
 
- <nav class="navbar navbar-dark navbar-expand-md bg-dark justify-content-between">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-nav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse dual-nav w-50 order-1 order-md-0">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link pl-0" href="index.php">Accueil<span class="sr-only">Home</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="modificationProfil.php">Profil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="deconnexionUser.php">Déconnexion</a>
-                </li>
-               
-            </ul>
-        </div>
-        <a href="index.php" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25">TellMe.io</a>
-        <div class="navbar-collapse collapse dual-nav w-50 order-2">
-        </div>
-    </div>
-</nav>
 
- 
-</header>
+<div class="">
+    <p><strong>userName : </strong> Est nostrud adipisicing ea sint pariatur cillum minim ut.</p>
+    <p><strong>userName : </strong> Est nostrud adipisicing ea sint pariatur cillum minim ut.</p>
+    <p><strong>userName : </strong> Est nostrud adipisicing ea sint pariatur cillum minim ut.</p>
+    <p><strong>userName : </strong> Est nostrud adipisicing ea sint pariatur cillum minim ut.</p>
+</div>
+
 
     <!-- Pour afficher chaque message à la suite, il faudrait peut etre faire un foreach des messages ("avec l'id de la table messages") 
     Mais les messages seront contenus dans quoi??? -->

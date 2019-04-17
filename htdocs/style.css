@@ -16,3 +16,14 @@ body{
 p{
     color:white;
 }
+
+.bob{
+  background: red ; 
+}
+.bob2{
+    background: blue ;
+}
+
+.row{
+    margin-top:100vh;;
+}

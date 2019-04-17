@@ -22,20 +22,30 @@ include 'bddConnexion.php';
 </nav>
 
 
-<form action="saveUser.php" method="post">
-    <p>Inscription</p>
-    <input type="text" placeholder="Identifiant" name="newUserName" required >
-    <input type="password" placeholder="Mot de passe" name="newUserPassword" required >
-    <button type="submit">Valider</button>
-</form>
 
-<form action="saveUser.php" method="post">
-   <p>Connexion</p>
-    <input type="text" placeholder="Votre identifiant" name="userName" required >
-    <input type="password" placeholder="Votre mot de passe" name="userPassword" required >
-    <button type="submit">Valider</button> 
-</form>
+<div class="container">
+    <div class="row col-12 justify-content-center">
+        <div class="bob col-5 form-group " >
 
+            <form action="saveUser.php" method="post">
+                <p>Inscription</p>
+                <input type="text" class="form-control" placeholder="Identifiant" name="newUserName" required >
+                <input type="password" placeholder="Mot de passe"
+                class="form-control" name="newUserPassword" required >
+                <button type="submit">Valider</button>
+            </form>
+        </div>
+
+        <!-- <div class="bob2 col-5 offset-md-2">
+            <form action="saveUser.php" method="post">
+            <p>Connexion</p>
+                <input type="text" placeholder="Votre identifiant" name="userName" required >
+                <input type="password" placeholder="Votre mot de passe" name="userPassword" required >
+                <button type="submit">Valider</button> 
+            </form>
+        </div> -->
+    </div>
+</div>
 </header>
 
 </body>

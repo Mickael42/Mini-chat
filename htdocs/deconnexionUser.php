@@ -44,6 +44,8 @@ session_start();
 
 </header>
 
+
+
 <p>Vous avez bien été déconnecté</p>
 
 

@@ -42,7 +42,7 @@ $messagesById = $req->fetchAll();
                             </li>
                         
                         </ul>
-                    </div>
+                    </div>userName
                         <a href="mainRoom.php" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25">TellMe.io</a>
                     <div class="navbar-collapse collapse dual-nav w-50 order-2">
                     </div>

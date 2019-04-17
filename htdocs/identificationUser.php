@@ -27,9 +27,13 @@ include 'bddConnexion.php';
     <input type="text" placeholder="Identifiant" name="userName" required>
     <input type="password" placeholder="Mot de passe" name="userPassword" required>
     <button type="submit">Valider</button>
+
+    <p>Connexion</p>
+    <input type="text" placeholder="Votre identifiant" name="userName" required>
+    <input type="password" placeholder="Votre mot de passe" name="userPassword" required>
+    <button type="submit">Valider</button>
 </form>
 
- 
 </header>
 
 </body>

@@ -1,7 +1,7 @@
 <?php
 
 include 'bddConnexion.php';
-
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +44,13 @@ include 'bddConnexion.php';
 
 </header>
 
-    
+<p>Vous avez bien été déconnecté</p>
 
+
+    <a href="identificationUser.php"><button type="submit">Se reconnecter</button></a>
+
+<?php
+session_destroy();
+?>
 </body>
 </html>

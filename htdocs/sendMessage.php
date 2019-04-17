@@ -13,6 +13,7 @@ $reponseUserName = $reponse->fetch();
 $userID=$reponseUserName['id'];
 $message = $_POST['userMessage'];
 
+
 //envoi du message dans BDD
 $sendMessage = $bdd->prepare(" INSERT INTO messages (userMessages,idUser) 
                                 VALUES (?,?)");

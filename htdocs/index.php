@@ -2,9 +2,13 @@
 include 'bddConnexion.php';
 session_start();
 
-//récupération des données de la bdd messages
-$reponse = $bdd->query('SELECT * FROM messages');
-$listeMessages = $reponse->fetchAll();
+//récupération des données de la bdd messages filter par l'idUser
+
+$req = $bdd->query('SELECT * FROM users
+                        INNER JOIN messages
+                        WHERE users.id = messages.idUser');
+$messagesById = $req->fetchAll();
+
 
 ?>
 
@@ -46,30 +50,23 @@ $listeMessages = $reponse->fetchAll();
         </nav>
     </header>
 
-
-
 <div class="card text-white bg-secondary mb-3" style="width: 50rem; margin : 20px;">
   <div class="card-header"> <h5 class="card-title">Bienvenue dans le salon de TellMe<strong> <?php echo $_SESSION['userName']?></strong></h5></div>
   <div class="card-body">
     <?php
-    //boucle d'affichage des messages
-    foreach ($listeMessages as $messages) {
 
-        echo "<p class='card-text'><em>".$messages['dateAndTime']."</em> <strong>".$_SESSION['userName']."</strong>"."    ". $messages['userMessages']."</p>";
+    //boucle d'affichage des messages
+    foreach ($messagesById as $messageById) {
+        echo "<p class='card-text'><em>".$messageById['dateAndTime']."</em> <strong>".$messageById['userName']."</strong>"."    ". $messageById['userMessages']."</p>";
     }
     ?>
   </div>
 </div>
 
 
-    <!-- Pour afficher chaque message à la suite, il faudrait peut etre faire un foreach des messages ("avec l'id de la table messages") 
-    Mais les messages seront contenus dans quoi??? -->
-
-
   <form action="sendMessage.php" method="post">  
     <label for="userMessage">Tape ton message : </label>
     <input type="text" name="userMessage" id="" placeholder="">
-
   </form>  
 
   

@@ -42,13 +42,34 @@ session_start();
         </div>
     </nav>
 </header>
+<?php
 
-<form action="saveModifProfil.php" method="POST">
+//Récupération de l'id de User via la donnée en session
+$reponse = $bdd->query('SELECT * FROM users
+                        WHERE userName = "'.$_SESSION['userName'].'"');
+$reponseUserName = $reponse->fetch();
 
-<input type="text" name="newUserName" value="<?php echo $_SESSION['userName']?>"required>
-<input type="text" name="newUserPassword" value="" placeholder ="Mot de passe"required>
-<button type="submit">Valider</button>
-</form>
+//Variable id et message utilisé pour l'envoi du message
+$userID=$reponseUserName['id'];
+
+//récupération des données post dans modificationProfil
+$changeName = $_POST['newUserName'];
+$changePassword = $_POST['newUserPassword'];
+
+
+//préparation de la requête de modification
+$req = $bdd->prepare("UPDATE users
+                      SET userName = ?, userPasswords=?
+                      WHERE id = ?");
+//remplacement des ? de la requête SQL par les données récuperé du formulaire
+
+$req->execute(array($changeName, $changePassword, $userID));
+
+?>
+
+<p>C'est modifié</p>
+
+
 
 
 </body>

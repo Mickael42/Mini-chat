@@ -1,6 +1,10 @@
 <?php
-
 include 'bddConnexion.php';
+session_start();
+
+//récupération des données de la bdd messages
+$reponse = $bdd->query('SELECT * FROM messages');
+$listeMessages = $reponse->fetchAll();
 
 ?>
 
@@ -43,11 +47,18 @@ include 'bddConnexion.php';
     </header>
 
 
-<div class="">
-    <p><strong>userName : </strong> Est nostrud adipisicing ea sint pariatur cillum minim ut.</p>
-    <p><strong>userName : </strong> Est nostrud adipisicing ea sint pariatur cillum minim ut.</p>
-    <p><strong>userName : </strong> Est nostrud adipisicing ea sint pariatur cillum minim ut.</p>
-    <p><strong>userName : </strong> Est nostrud adipisicing ea sint pariatur cillum minim ut.</p>
+
+<div class="card text-white bg-secondary mb-3" style="width: 50rem; margin : 20px;">
+  <div class="card-header"> <h5 class="card-title">Bienvenue dans le salon de TellMe<strong> <?php echo $_SESSION['userName']?></strong></h5></div>
+  <div class="card-body">
+    <?php
+    //boucle d'affichage des messages
+    foreach ($listeMessages as $messages) {
+
+        echo "<p class='card-text'><em>".$messages['dateAndTime']."</em> <strong>".$_SESSION['userName']."</strong>"."    ". $messages['userMessages']."</p>";
+    }
+    ?>
+  </div>
 </div>
 
 
@@ -55,10 +66,13 @@ include 'bddConnexion.php';
     Mais les messages seront contenus dans quoi??? -->
 
 
-  <form action="index.php" method="post">  
+  <form action="sendMessage.php" method="post">  
     <label for="userMessage">Tape ton message : </label>
-    <input type="text" name="userMessage" id="" placeholder="insérer ici du php avec nom de User">
+    <input type="text" name="userMessage" id="" placeholder="">
+
   </form>  
+
+  
 
 </body>
 </html>

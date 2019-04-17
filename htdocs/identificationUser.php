@@ -21,6 +21,14 @@ include 'bddConnexion.php';
         <a href="index.php" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-100">TellMe.io</a>
 </nav>
 
+
+<form action="saveUser.php" method="post">
+    <p>Inscription</p>
+    <input type="text" placeholder="Identifiant" name="userName" required>
+    <input type="password" placeholder="Mot de passe" name="userPassword" required>
+    <button type="submit">Valider</button>
+</form>
+
  
 </header>
 

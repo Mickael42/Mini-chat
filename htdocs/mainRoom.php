@@ -42,36 +42,42 @@ $messagesById = $req->fetchAll();
                             </li>
                         
                         </ul>
-                    </div>userName
+                    </div>
                         <a href="mainRoom.php" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25">TellMe.io</a>
                     <div class="navbar-collapse collapse dual-nav w-50 order-2">
                     </div>
             </div>
         </nav>
     </header>
-
-<div class="card text-white bg-secondary mb-3" style="width: 70rem; margin : 20px;">
-  <div class="card-header"> <h5 class="card-title">Bienvenue dans le salon de TellMe<strong> <?php echo @$_SESSION['userName']?></strong></h5></div>
-  <div class="card-body">
-    <?php
-
-    //boucle d'affichage des messages
-    foreach ($messagesById as $messageById) {
-        echo "<p class='card-text'><em>".$messageById['dateAndTime']."</em> <strong>".$messageById['userName']."</strong>"."    ". $messageById['userMessages']."</p>";
-    }
-    ?>
+    <div class="tchat container">
+        <div class="row">
+            <div class=" card text-white bg-secondary " style="width: 70rem; margin : 20px; margin-top : 50px;">
+                <div class="card-header"> <h5 class="tchatTitle card-title">Bienvenue dans le salon de TellMe.io <strong> <?php echo @$_SESSION['userName']?></strong></h5></div>
+                    <div class="tchatMessages card-body">
+                        <?php
+                        //boucle d'affichage des messages
+                        foreach ($messagesById as $messageById) {
+                            echo "<p class='card-text'><em>".$messageById['dateAndTime']."</em> <strong>".$messageById['userName']."</strong>"."    ". $messageById['userMessages']."</p>";
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+<div class="formMessage container">
+    <div class="row col-12 align-items-center justify-content-center">
+        <div class="colInscription col-5 form-group " >
+            <form action="sendMessage.php" method="post">  
+                <label for="userMessage" class="labelMessage">Tape ton message : </label>
+                <input type="text" name="userMessage" class="buttonSubmit" id="" placeholder="">
+            </form> 
+        </div>
     </div>
 </div>
 
-<div class="message">
 
-  <form action="sendMessage.php" method="post">  
-    <label for="userMessage">Tape ton message : </label>
-    <input type="text" name="userMessage" id="" placeholder="">
-  </form>  
-</div>
-  
 
 </body>
 </html>

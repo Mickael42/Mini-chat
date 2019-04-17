@@ -44,8 +44,15 @@ $resultat = $req->fetch();
 
 
     if (empty($resultat)){
-        echo '<p>Bienvenue '.$newUserName.'!</p>';
-        echo "<a href='mainRoom.php'><button type='submit'>Entrer dans le salon</button></a>";
+        echo '<div class="container">
+                <div class="row col-12 align-items-center justify-content-center">
+                    <div class=" col-9 form-group " >
+                            <h4>Bienvenue <strong>'.$newUserName.'</strong> !</h4>
+                            <a href="mainRoom.php"><button type="submit" class="buttonSubmit">Entrer dans le salon</button></a>
+                    </div>
+                </div>            
+            </div>';
+
 
 
         $_SESSION['userName']=$newUserName ;
@@ -60,8 +67,16 @@ $resultat = $req->fetch();
 
 
     }else {
-       echo '<p>Cette identifiant existent déjà</p>';
-       echo "<a href='index.php'><button type='submit'>Retour à la page de connexion</button></a>";
+       echo '
+       <div class="container">
+            <div class="row col-12 align-items-center justify-content-center text-align-center">
+                <div class=" col-9 form-group " >
+                        <h4>Quelqu\'a déjà pris ce blaze, va falloir changer!</h4>
+                        <a href="index.php"><button type="submit" class="buttonSubmit">Retour à la page de connexion</button></a>
+        
+                </div>
+            </div>
+        </div>';
     }
 
 
@@ -84,13 +99,28 @@ $reponse = $req->fetch();
 
 if (empty($reponse)){
 
-    echo "<p>Cette identifiant n'est pas reconnu, veuillez recommencer</p>";
-    echo "<a href='index.php'><button type='submit'>Retour à la page de connexion</button></a>";
+    echo '
+    <div class="container">
+    <div class="row col-12 align-items-center justify-content-center text-align-center">
+        <div class=" col-9 form-group ">
+                <h4>Tu t\'es planté dans le nom de ton blaze, recommence !</h4>
+                <a href="index.php"><button type="submit" class="buttonSubmit">Retour à la page de connexion</button></a>
+
+        </div>
+    </div>
+</div>';
 
     }else {
-        echo '<p>Bienvenue '.$userName.'!</p>';
-        echo "<a href='mainRoom.php'><button type='submit'>Entrer dans le salon</button></a>";
-    
+        echo '
+        <div class="container">
+        <div class="row col-12 align-items-center justify-content-center text-align-center">
+            <div class=" col-9 form-group ">
+                    <h4>Bienvenue <strong>'.$userName.'</strong> !</h4>
+                    <a href="mainRoom.php"><button type="submit" class="buttonSubmit">Entrer dans le salon</button></a>
+
+            </div>
+            </div>
+        </div>';
     
         $_SESSION['userName']=$userName ;
         $_SESSION['userPasword']=$userPassword ;

@@ -1,5 +1,6 @@
 body{
     background-image: url("background.jpg");
+    font-family :"Montserrat", sans-serif;
     
 }
 
@@ -17,13 +18,63 @@ p{
     color:white;
 }
 
-.bob{
-  background: red ; 
-}
-.bob2{
-    background: blue ;
+.row{
+    margin-top:30vh;;
 }
 
-.row{
-    margin-top:100vh;;
+.colInscription{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.inputIndex{
+    margin: 5px;
+    border-radius: 10px;
+}
+.colInscription:hover{
+    border : 9px double white;
+    background :rgb(117, 9, 9);
+    transition: all 520ms ease-out; 
+}
+
+h4{
+    color : white;
+}
+
+.buttonSubmit {
+    background-color: #f44336; 
+    color: white; 
+    border: 2px solid white;
+  }
+  
+  .buttonSubmit:hover {
+    background-color: white ;
+    
+    color:#f44336;
+  }
+
+  .tchatTitle{
+      text-align: center;
+       
+    
+  }
+  .tchat {
+      transform : translateY(-250px);
+      
+  }
+  .tchatMessages{
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  .labelMessage{
+      color:white;
+  }
+
+  .formMessage {
+    transform : translateY(-480px);
+}
+
+.modif{
+    text-align: center;
 }

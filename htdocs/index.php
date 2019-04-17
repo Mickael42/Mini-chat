@@ -24,26 +24,26 @@ include 'bddConnexion.php';
 
 
 <div class="container">
-    <div class="row col-12 justify-content-center">
-        <div class="bob col-5 form-group " >
+    <div class="row col-12 align-items-center justify-content-center">
+        <div class="colInscription col-5 form-group " >
 
             <form action="saveUser.php" method="post">
-                <p>Inscription</p>
-                <input type="text" class="form-control" placeholder="Identifiant" name="newUserName" required >
-                <input type="password" placeholder="Mot de passe"
-                class="form-control" name="newUserPassword" required >
-                <button type="submit">Valider</button>
+                <h4>Tu es nouveau? Inscris-toi !</h4>
+                <input type="text" class="inputIndex form-control" placeholder="Identifiant" name="newUserName" required >
+                <input type="password" placeholder="Mot de passe" class="inputIndex form-control" name="newUserPassword" required >
+                <button type="submit" class="buttonSubmit" >Valider</button>
             </form>
         </div>
 
-        <!-- <div class="bob2 col-5 offset-md-2">
+        <div class="colInscription col-5 offset-md-2 form-group ">
+
             <form action="saveUser.php" method="post">
-            <p>Connexion</p>
-                <input type="text" placeholder="Votre identifiant" name="userName" required >
-                <input type="password" placeholder="Votre mot de passe" name="userPassword" required >
-                <button type="submit">Valider</button> 
+                <h4>Déjà membre? Connecte-toi!</h4>
+                <input type="text" placeholder="Votre identifiant"class="inputIndex form-control" name="userName" required >
+                <input type="password" placeholder="Votre mot de passe" class="inputIndex form-control" name="userPassword" required >
+                <button type="submit" class="buttonSubmit" >Valider</button> 
             </form>
-        </div> -->
+        </div>
     </div>
 </div>
 </header>

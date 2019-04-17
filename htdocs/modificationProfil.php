@@ -43,13 +43,22 @@ session_start();
     </nav>
 </header>
 
-<form action="saveModifProfil.php" method="POST">
 
-<input type="text" name="newUserName" value="<?php echo $_SESSION['userName']?>"required>
-<input type="text" name="newUserPassword" value="" placeholder ="Mot de passe"required>
-<button type="submit">Valider</button>
-</form>
 
+
+<div class="container">
+    <div class="modif row col-12 align-items-center justify-content-center">
+        <div class=" col-6 form-group" >
+
+            <form action="saveModifProfil.php" method="POST">   
+                <h4>Si tu veux changer ton nom d'utilisateur ou ton mot de passe, remplis ces champs!</h4>
+                <input type="text" name="newUserName" class="inputIndex form-control" value="<?php echo $_SESSION['userName']?>"required>
+                <input type="text" name="newUserPassword" class="inputIndex form-control" value="" placeholder ="Mot de passe"required>
+                <button type="submit" class="buttonSubmit" >Valider</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

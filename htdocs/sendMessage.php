@@ -20,4 +20,4 @@ $sendMessage = $bdd->prepare(" INSERT INTO messages (userMessages,idUser)
 $sendMessage->execute(array($message , $userID));
 
 //Redirection
-header('Location: index.php'); 
+header('Location: mainRoom.php'); 

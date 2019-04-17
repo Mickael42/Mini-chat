@@ -1,0 +1,18 @@
+body{
+    background-image: url("background.jpg");
+    
+}
+
+.navbar{
+    opacity: 0.73;
+
+}
+
+.navbar:hover{
+    opacity : 1;
+    transition: all 720ms ease-out;
+}
+
+p{
+    color:white;
+}

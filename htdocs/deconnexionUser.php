@@ -25,10 +25,10 @@ session_start();
         <div class="navbar-collapse collapse dual-nav w-50 order-1 order-md-0">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link pl-0" href="index.php">Accueil<span class="sr-only">Home</span></a>
+                    <a class="nav-link pl-0" href="">Accueil<span class="sr-only">Home</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="modificationProfil.php">Profil</a>
+                    <a class="nav-link" href="">Profil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="deconnexionUser.php">Déconnexion</a>
@@ -36,7 +36,7 @@ session_start();
                
             </ul>
         </div>
-        <a href="index.php" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25">TellMe.io</a>
+        <a href="" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25">TellMe.io</a>
         <div class="navbar-collapse collapse dual-nav w-50 order-2">
         </div>
     </div>
@@ -47,7 +47,7 @@ session_start();
 <p>Vous avez bien été déconnecté</p>
 
 
-    <a href="identificationUser.php"><button type="submit">Se reconnecter</button></a>
+    <a href="index.php"><button type="submit">Se reconnecter</button></a>
 
 <?php
 session_destroy();

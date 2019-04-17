@@ -19,7 +19,7 @@ session_start();
 <header>
 
  <nav class="navbar navbar-dark navbar-expand-md bg-dark text-center  justify-content-between" >
-        <a href="index.php" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-100">TellMe.io</a>
+        <a href="mainRoom.php" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-100">TellMe.io</a>
 </nav>
 </header>
 
@@ -45,7 +45,7 @@ $resultat = $req->fetch();
 
     if (empty($resultat)){
         echo '<p>Bienvenue '.$newUserName.'!</p>';
-        echo "<a href='index.php'><button type='submit'>Entrer dans le salon</button></a>";
+        echo "<a href='mainRoom.php'><button type='submit'>Entrer dans le salon</button></a>";
 
 
         $_SESSION['userName']=$newUserName ;
@@ -61,7 +61,7 @@ $resultat = $req->fetch();
 
     }else {
        echo '<p>Cette identifiant existent déjà</p>';
-       echo "<a href='identificationUser.php'><button type='submit'>Retour à la page de connexion</button></a>";
+       echo "<a href='index.php'><button type='submit'>Retour à la page de connexion</button></a>";
     }
 
 
@@ -85,11 +85,11 @@ $reponse = $req->fetch();
 if (empty($reponse)){
 
     echo "<p>Cette identifiant n'est pas reconnu, veuillez recommencer</p>";
-    echo "<a href='identificationUser.php'><button type='submit'>Retour à la page de connexion</button></a>";
+    echo "<a href='index.php'><button type='submit'>Retour à la page de connexion</button></a>";
 
     }else {
         echo '<p>Bienvenue '.$userName.'!</p>';
-        echo "<a href='index.php'><button type='submit'>Entrer dans le salon</button></a>";
+        echo "<a href='mainRoom.php'><button type='submit'>Entrer dans le salon</button></a>";
     
     
         $_SESSION['userName']=$userName ;

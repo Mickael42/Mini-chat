@@ -24,14 +24,16 @@ include 'bddConnexion.php';
 
 <form action="saveUser.php" method="post">
     <p>Inscription</p>
-    <input type="text" placeholder="Identifiant" name="userName" required>
-    <input type="password" placeholder="Mot de passe" name="userPassword" required>
+    <input type="text" placeholder="Identifiant" name="newUserName" required >
+    <input type="password" placeholder="Mot de passe" name="newUserPassword" required >
     <button type="submit">Valider</button>
+</form>
 
-    <p>Connexion</p>
-    <input type="text" placeholder="Votre identifiant" name="userName" required>
-    <input type="password" placeholder="Votre mot de passe" name="userPassword" required>
-    <button type="submit">Valider</button>
+<form action="saveUser.php" method="post">
+   <p>Connexion</p>
+    <input type="text" placeholder="Votre identifiant" name="userName" required >
+    <input type="password" placeholder="Votre mot de passe" name="userPassword" required >
+    <button type="submit">Valider</button> 
 </form>
 
 </header>

@@ -1,31 +1,38 @@
+html{
+    font-family: Raleway;
+}
+
 body{
     background-image: url("background.jpg");
-    font-family :"Montserrat", sans-serif;
+    font-family: Raleway;
     
 }
 
 .navbar{
-    opacity: 0.73;
+    opacity: 0.23;
 
 }
 
 .navbar:hover{
     opacity : 1;
-    transition: all 720ms ease-out;
+    transition: all 320ms ease-out;
 }
 
 p{
     color:white;
+    font-family: Raleway;
 }
 
 .row{
-    margin-top:30vh;;
+    margin-top:30vh;
+    font-family: Raleway;
 }
 
 .colInscription{
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-family: Raleway;
 }
 .inputIndex{
     margin: 5px;
@@ -39,12 +46,14 @@ p{
 
 h4{
     color : white;
+    font-family: Raleway;
 }
 
 .buttonSubmit {
     background-color: #f44336; 
     color: white; 
     border: 2px solid white;
+    font-family: Raleway;
   }
   
   .buttonSubmit:hover {
@@ -55,6 +64,7 @@ h4{
 
   .tchatTitle{
       text-align: center;
+      font-family: Raleway;
        
     
   }
@@ -65,6 +75,7 @@ h4{
   .tchatMessages{
     max-height: 500px;
     overflow-y: auto;
+    font-family: Raleway;
   }
 
   .labelMessage{
@@ -73,6 +84,7 @@ h4{
 
   .formMessage {
     transform : translateY(-480px);
+    font-family: Raleway;
 }
 
 .modif{

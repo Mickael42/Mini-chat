@@ -6,7 +6,8 @@ session_start();
 
 $req = $bdd->query('SELECT * FROM users
                         INNER JOIN messages
-                        WHERE users.id = messages.idUser');
+                        WHERE users.id = messages.idUser
+                        ORDER BY dateAndTime DESC ');
 $messagesById = $req->fetchAll();
 
 

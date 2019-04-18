@@ -12,7 +12,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Déconnexion|TellMe.io</title>
+    <title>modificationProfil|TellMe.io</title>
 </head>
 <body>
 <header>
@@ -67,8 +67,16 @@ $req->execute(array($changeName, $changePassword, $userID));
 
 ?>
 
-<p>C'est modifié</p>
-
+<p></p>
+<div class="container">
+    <div class="modif row col-12 align-items-center justify-content-center">
+        <div class=" col-6 form-group" >
+                <h4>C'est modifié !</h4>
+                <a href="mainRoom.php"><button type="submit" class="buttonSubmit">Retourner au salon</button></a>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 
